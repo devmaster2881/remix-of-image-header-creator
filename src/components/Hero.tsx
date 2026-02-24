@@ -3,30 +3,10 @@ import { ArrowUpRight } from "lucide-react";
 import heroBanner1 from "@/assets/hero-banner.png";
 import heroBanner2 from "@/assets/hero-banner-2.png";
 
-const slides = [
-  {
-    heading: "Redefining Impact with SME-Led & Behaviour Training",
-    subtext:
-      "Crafting inspired professionals through dynamic, human-powered learning experiences",
-    image: heroBanner1,
-  },
-  {
-    heading: "Empowering Teams Through Expert-Led Workshops",
-    subtext:
-      "Unlock potential with tailored programs designed for real-world impact",
-    image: heroBanner2,
-  },
-  {
-    heading: "Building Future-Ready Leaders with Practical Skills",
-    subtext:
-      "Transform your workforce through immersive, results-driven training",
-    image: heroBanner1,
-  },
-];
+const heroImages = [heroBanner1, heroBanner2, heroBanner1];
 
 const Hero = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const current = slides[activeSlide];
 
   return (
     <section
@@ -41,11 +21,11 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-6 max-w-lg">
             <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold leading-[1.15] text-foreground tracking-tight">
-              {current.heading}
+              Redefining Impact with SME-Led & Behaviour Training
             </h1>
 
             <p className="text-base text-muted-foreground leading-relaxed max-w-sm">
-              {current.subtext}
+              Crafting inspired professionals through dynamic, human-powered learning experiences
             </p>
 
             {/* Email Input */}
@@ -62,18 +42,18 @@ const Hero = () => {
           </div>
 
           {/* Right Image with dots below */}
-          <div className="relative flex flex-col items-center lg:items-end">
+          <div className="relative flex flex-col items-center">
             <div className="relative w-full max-w-md">
               <img
-                src={current.image}
+                src={heroImages[activeSlide]}
                 alt="Training professional"
                 className="w-full h-auto transition-opacity duration-300"
               />
             </div>
 
-            {/* Slider Dots below image */}
+            {/* Slider Dots centered below image */}
             <div className="flex gap-3 mt-6">
-              {slides.map((_, index) => (
+              {heroImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveSlide(index)}
