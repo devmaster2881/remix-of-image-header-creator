@@ -1,25 +1,26 @@
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
-import heroBanner from "@/assets/hero-banner.png";
+import heroBanner1 from "@/assets/hero-banner.png";
+import heroBanner2 from "@/assets/hero-banner-2.png";
 
 const slides = [
   {
     heading: "Redefining Impact with SME-Led & Behaviour Training",
     subtext:
       "Crafting inspired professionals through dynamic, human-powered learning experiences",
-    image: heroBanner,
+    image: heroBanner1,
   },
   {
     heading: "Empowering Teams Through Expert-Led Workshops",
     subtext:
       "Unlock potential with tailored programs designed for real-world impact",
-    image: heroBanner,
+    image: heroBanner2,
   },
   {
     heading: "Building Future-Ready Leaders with Practical Skills",
     subtext:
       "Transform your workforce through immersive, results-driven training",
-    image: heroBanner,
+    image: heroBanner1,
   },
 ];
 
@@ -60,32 +61,32 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Image */}
-          <div className="relative flex justify-center lg:justify-end">
+          {/* Right Image with dots below */}
+          <div className="relative flex flex-col items-center lg:items-end">
             <div className="relative w-full max-w-md">
               <img
                 src={current.image}
                 alt="Training professional"
-                className="w-full h-auto"
+                className="w-full h-auto transition-opacity duration-300"
               />
             </div>
-          </div>
-        </div>
 
-        {/* Slider Dots */}
-        <div className="flex justify-center gap-3 mt-12">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === activeSlide
-                  ? "bg-[#F5C518] scale-125"
-                  : "bg-[#F5C518]/40"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+            {/* Slider Dots below image */}
+            <div className="flex gap-3 mt-6">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === activeSlide
+                      ? "bg-[#F5C518] scale-125"
+                      : "bg-[#F5C518]/40"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
