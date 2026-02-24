@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TrustedPartners from "@/components/TrustedPartners";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import OurPedagogy from "@/components/OurPedagogy";
+import WhyTBHCircle from "@/components/WhyTBHCircle";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <TrustedPartners />
       <WhyChooseUs />
       <OurPedagogy />
+      <WhyTBHCircle />
     </div>
   );
 };
