@@ -4,6 +4,8 @@ import TrustedPartners from "@/components/TrustedPartners";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import OurPedagogy from "@/components/OurPedagogy";
 import WhyTBHCircle from "@/components/WhyTBHCircle";
+import Courses from "@/components/Courses";
+import OurMethodologies from "@/components/OurMethodologies";
 
 const Index = () => {
   return (
@@ -14,6 +16,8 @@ const Index = () => {
       <WhyChooseUs />
       <OurPedagogy />
       <WhyTBHCircle />
+      <Courses />
+      <OurMethodologies />
     </div>
   );
 };

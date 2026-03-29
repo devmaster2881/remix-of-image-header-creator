@@ -7,28 +7,28 @@ const methods = [
     title: "Storytelling",
     description:
       "We use real stories to make concepts easy to relate to, remember, and apply at work.",
-    color: "text-orange-500 bg-orange-50",
+    color: "text-[hsl(25,95%,53%)] bg-[hsl(25,100%,95%)]",
   },
   {
     icon: Lightbulb,
     title: "Case Studies",
     description:
       "Participants solve real business situations so learning directly transfers to the job.",
-    color: "text-yellow-500 bg-yellow-50",
+    color: "text-[hsl(48,90%,52%)] bg-[hsl(48,100%,95%)]",
   },
   {
     icon: Gamepad2,
     title: "Board Games & Simulations",
     description:
       "Games create safe practice environments where people learn faster through action and feedback.",
-    color: "text-blue-500 bg-blue-50",
+    color: "text-[hsl(217,91%,60%)] bg-[hsl(217,100%,95%)]",
   },
   {
     icon: FlaskConical,
     title: "Experimentation & Experiential Learning",
     description:
       "Participants learn by doing, testing behaviours, and reflecting on real outcomes.",
-    color: "text-red-500 bg-red-50",
+    color: "text-[hsl(0,84%,60%)] bg-[hsl(0,100%,95%)]",
   },
 ];
 
@@ -41,19 +41,19 @@ const OurPedagogy = () => {
           "linear-gradient(180deg, rgba(255,248,217,0) 0%, #FFF8D9 50%, rgba(255,248,217,0) 100%)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="w-full">
+        <div className="grid lg:grid-cols-2 gap-0 items-center">
           {/* Left Image */}
-          <div className="rounded-2xl overflow-hidden">
+          <div className="overflow-hidden h-full">
             <img
               src={pedagogyImg}
               alt="Collaborative learning environment"
-              className="w-full h-full object-cover aspect-square"
+              className="w-full h-full object-cover"
             />
           </div>
 
           {/* Right Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 px-8 md:px-16 py-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Our Pedagogy
             </h2>

@@ -14,12 +14,12 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-transparent">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-[1236px] mx-auto px-6 py-4">
         <div className="flex items-center justify-between bg-white rounded-full px-6 py-3 shadow-sm border border-border/20">
 
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={logo} alt="TBH Circle" className="h-10 w-10" />
+            <img src={logo} alt="TBH Circle" className="h-[58.7px] w-[58.7px]" />
           </div>
 
           {/* Navigation */}

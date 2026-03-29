@@ -2,8 +2,9 @@ import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import heroBanner1 from "@/assets/hero-banner.png";
 import heroBanner2 from "@/assets/hero-banner-2.png";
+import heroBanner3 from "@/assets/hero-banner-3.png";
 
-const heroImages = [heroBanner1, heroBanner2, heroBanner1];
+const heroImages = [heroBanner1, heroBanner2, heroBanner3];
 
 const Hero = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -16,7 +17,7 @@ const Hero = () => {
           "linear-gradient(180deg, #FFF8D9 0%, rgba(255, 248, 217, 0) 100%)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1236px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 max-w-lg">
@@ -59,8 +60,8 @@ const Hero = () => {
                   onClick={() => setActiveSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === activeSlide
-                      ? "bg-[#F5C518] scale-125"
-                      : "bg-[#F5C518]/40"
+                      ? "bg-[hsl(48,90%,52%)] scale-125"
+                      : "bg-[hsl(48,90%,52%)]/40"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

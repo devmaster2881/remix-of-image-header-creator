@@ -3,17 +3,17 @@ import { Star } from "lucide-react";
 const WhyChooseUs = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1236px] mx-auto px-6">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-8 items-start">
           {/* Left Title */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-            Why choose us
+            Explore Our Approach
           </h2>
 
           {/* Right Bento Grid */}
           <div className="grid grid-cols-3 grid-rows-2 gap-4">
-            {/* Card 1 - Testimonial + 30,000+ */}
-            <div className="bg-[#F5C518] rounded-2xl p-6 flex flex-col justify-between row-span-2">
+            {/* Card 1 - Testimonial + 30,000+ (yellow, row-span-2) */}
+            <div className="bg-[hsl(48,90%,52%)] rounded-2xl p-6 flex flex-col justify-between row-span-2">
               <div className="space-y-2">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
@@ -49,15 +49,15 @@ const WhyChooseUs = () => {
               <p className="text-sm text-muted-foreground">hours of training</p>
             </div>
 
-            {/* Card 4 - 50+ Corporates */}
-            <div className="bg-[#F5C518]/20 rounded-2xl p-6 flex flex-col justify-end">
-              <p className="text-4xl font-bold text-foreground">50+</p>
-              <p className="text-sm text-muted-foreground">Corporates Org</p>
+            {/* Card 4 - 50+ Corporates (dark) */}
+            <div className="bg-foreground rounded-2xl p-6 flex flex-col justify-end">
+              <p className="text-4xl font-bold text-background">50+</p>
+              <p className="text-sm text-background/70">Corporates Org</p>
               <div className="flex -space-x-2 mt-3">
                 {[...Array(5)].map((_, i) => (
                   <div
                     key={i}
-                    className="w-7 h-7 rounded-full bg-muted-foreground/30 border-2 border-white"
+                    className="w-7 h-7 rounded-full bg-background/30 border-2 border-foreground"
                   />
                 ))}
               </div>
