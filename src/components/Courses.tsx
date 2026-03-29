@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
-
 const courses = [
   "Human Behaviour",
   "Sales & Negotiation",
@@ -20,7 +18,7 @@ const Courses = () => {
       }}
     >
       <div className="max-w-[1236px] mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
+        <h2 className="text-3xl md:text-5xl font-black text-foreground mb-10">
           Courses
         </h2>
 
@@ -28,12 +26,9 @@ const Courses = () => {
           {courses.map((course) => (
             <div
               key={course}
-              className="bg-white rounded-2xl px-6 py-5 flex items-center justify-between shadow-sm border border-border/30 hover:shadow-md transition-shadow cursor-pointer group"
+              className="bg-white rounded-2xl px-6 py-5 flex items-center shadow-sm border border-border/30 hover:shadow-md transition-shadow cursor-pointer"
             >
-              <span className="font-semibold text-foreground">{course}</span>
-              <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center group-hover:bg-foreground/80 transition-colors">
-                <ArrowUpRight className="w-4 h-4 text-background" />
-              </div>
+              <span className="font-bold text-foreground text-lg">{course}</span>
             </div>
           ))}
         </div>

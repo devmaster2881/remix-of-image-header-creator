@@ -3,107 +3,152 @@ const steps = [
     number: "01",
     title: "T-Group Analysis",
     description:
-      "A deep-dive into group dynamics where participants observe their own behaviours in real-time, building self-awareness and interpersonal sensitivity.",
+      "Participants gain self-awareness by receiving honest feedback in live group interactions.",
   },
   {
     number: "02",
     title: "Group Process Work",
     description:
-      "Structured group exercises that surface team patterns, power dynamics, and communication styles to drive collective growth.",
+      "Teams learn to understand how they function together and improve collaboration and trust.",
   },
   {
     number: "03",
     title: "Theatre of the Oppressed",
     description:
-      "Interactive theatre techniques that let participants rehearse real-life workplace challenges in a safe, creative space.",
+      "Workplace challenges are acted out so participants can explore issues and try new solutions.",
   },
   {
     number: "04",
     title: "Group Process Work",
     description:
-      "Advanced facilitation methods that help teams navigate conflict, build trust, and co-create solutions together.",
+      "Teams learn to understand how they function together and improve collaboration and trust.",
   },
 ];
+
+const ArrowRight = () => (
+  <svg width="110" height="80" viewBox="0 0 110 80" fill="none" className="shrink-0">
+    <rect x="0" y="24" width="68" height="32" rx="4" fill="url(#arrowGradR)" />
+    <path d="M68 12 L110 40 L68 68 Z" fill="url(#arrowGradR)" />
+    <defs>
+      <linearGradient id="arrowGradR" x1="0" y1="0" x2="110" y2="0">
+        <stop offset="0%" stopColor="#F5E27A" />
+        <stop offset="100%" stopColor="#D4A83A" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+const ArrowLeft = () => (
+  <svg width="110" height="80" viewBox="0 0 110 80" fill="none" className="shrink-0">
+    <rect x="42" y="24" width="68" height="32" rx="4" fill="url(#arrowGradL)" />
+    <path d="M42 12 L0 40 L42 68 Z" fill="url(#arrowGradL)" />
+    <defs>
+      <linearGradient id="arrowGradL" x1="110" y1="0" x2="0" y2="0">
+        <stop offset="0%" stopColor="#F5E27A" />
+        <stop offset="100%" stopColor="#D4A83A" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
 
 const OurMethodologies = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
-      <div className="max-w-[1236px] mx-auto px-6">
+      <div className="max-w-[1106px] mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4">
             Our Methodologies
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            Science-backed frameworks that create lasting behavioural change in individuals and teams.
+          <p className="text-muted-foreground max-w-md mx-auto text-sm">
+            We use proven experiential methods to create deep self-awareness and
+            lasting behavioural change.
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical center line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px border-l-2 border-dashed border-border hidden lg:block" />
+        {/* Desktop timeline */}
+        <div className="hidden lg:block relative">
+          {/* Center dashed line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px border-l-2 border-dashed border-muted-foreground/30" />
 
-          <div className="space-y-12 lg:space-y-0">
-            {steps.map((step, index) => {
-              const isLeft = index % 2 === 0;
-              return (
-                <div key={step.number} className="relative lg:flex lg:items-center lg:min-h-[200px]">
-                  {/* Left side */}
-                  <div className={`lg:w-1/2 ${isLeft ? "lg:pr-16" : "lg:order-2 lg:pl-16"}`}>
-                    {(isLeft || !isLeft) && (
-                      <div className={`${isLeft ? "lg:ml-auto lg:mr-0" : ""} max-w-md ${isLeft ? "lg:text-right" : ""}`}>
-                        {isLeft && (
-                          <div className="bg-white rounded-2xl p-6 shadow-sm border border-border/30 relative">
-                            <span className="absolute -top-3 -left-3 text-6xl font-black text-[hsl(48,90%,52%)]/20 select-none leading-none">
-                              {step.number}
-                            </span>
-                            <h3 className="font-bold text-lg text-foreground mb-2">
-                              {step.title}
-                            </h3>
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                              {step.description}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Center dot */}
-                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[hsl(48,90%,52%)] border-4 border-background z-10 hidden lg:block" />
-
-                  {/* Right side */}
-                  <div className={`lg:w-1/2 ${isLeft ? "lg:order-2 lg:pl-16" : "lg:pr-16"}`}>
-                    {!isLeft && (
-                      <div className="max-w-md">
-                        <div className="bg-white rounded-2xl p-6 shadow-sm border border-border/30 relative">
-                          <span className="absolute -top-3 -right-3 text-6xl font-black text-[hsl(48,90%,52%)]/20 select-none leading-none">
-                            {step.number}
-                          </span>
-                          <h3 className="font-bold text-lg text-foreground mb-2">
-                            {step.title}
-                          </h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
-                            {step.description}
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Arrow connector */}
-                  {index < steps.length - 1 && (
-                    <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full hidden lg:block">
-                      <svg width="24" height="40" viewBox="0 0 24 40" fill="none" className="text-[hsl(48,90%,52%)]">
-                        <path d="M12 0 L12 32 M6 26 L12 34 L18 26" stroke="currentColor" strokeWidth="2" fill="none" />
-                      </svg>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+          {/* Row 1: Card left, Arrow right */}
+          <div className="relative flex items-center min-h-[200px]">
+            <div className="w-1/2 pr-16 flex justify-end relative">
+              <span className="absolute -bottom-6 left-[10%] text-[130px] font-black text-[#F1D76D]/70 select-none leading-none pointer-events-none" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.06))" }}>
+                01
+              </span>
+              <div className="bg-white rounded-xl p-6 shadow-md max-w-[260px] w-full relative z-10">
+                <h3 className="font-bold text-sm text-foreground mb-2">{steps[0].title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{steps[0].description}</p>
+              </div>
+            </div>
+            <div className="w-1/2 pl-8 flex items-center">
+              <ArrowRight />
+            </div>
           </div>
+
+          {/* Row 2: Arrow left, Card right */}
+          <div className="relative flex items-center min-h-[200px]">
+            <div className="w-1/2 pr-8 flex items-center justify-end">
+              <ArrowLeft />
+            </div>
+            <div className="w-1/2 pl-16 flex justify-start relative">
+              <span className="absolute -bottom-6 right-[10%] text-[130px] font-black text-[#F1D76D]/70 select-none leading-none pointer-events-none" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.06))" }}>
+                02
+              </span>
+              <div className="bg-white rounded-xl p-6 shadow-md max-w-[260px] w-full relative z-10">
+                <h3 className="font-bold text-sm text-foreground mb-2">{steps[1].title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{steps[1].description}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 3: Card left, Arrow right */}
+          <div className="relative flex items-center min-h-[200px]">
+            <div className="w-1/2 pr-16 flex justify-end relative">
+              <span className="absolute -bottom-6 left-[10%] text-[130px] font-black text-[#F1D76D]/70 select-none leading-none pointer-events-none" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.06))" }}>
+                03
+              </span>
+              <div className="bg-white rounded-xl p-6 shadow-md max-w-[260px] w-full relative z-10">
+                <h3 className="font-bold text-sm text-foreground mb-2">{steps[2].title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{steps[2].description}</p>
+              </div>
+            </div>
+            <div className="w-1/2 pl-8 flex items-center">
+              <ArrowRight />
+            </div>
+          </div>
+
+          {/* Row 4: Arrow left, Card right */}
+          <div className="relative flex items-center min-h-[200px]">
+            <div className="w-1/2 pr-8 flex items-center justify-end">
+              <ArrowLeft />
+            </div>
+            <div className="w-1/2 pl-16 flex justify-start relative">
+              <span className="absolute -bottom-6 right-[10%] text-[130px] font-black text-[#F1D76D]/70 select-none leading-none pointer-events-none" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.06))" }}>
+                04
+              </span>
+              <div className="bg-white rounded-xl p-6 shadow-md max-w-[260px] w-full relative z-10">
+                <h3 className="font-bold text-sm text-foreground mb-2">{steps[3].title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{steps[3].description}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile */}
+        <div className="lg:hidden space-y-6">
+          {steps.map((step, index) => (
+            <div key={step.number} className="relative">
+              <span className="absolute -top-4 -left-1 text-[80px] font-black text-[#F1D76D]/50 select-none leading-none z-0">
+                {step.number}
+              </span>
+              <div className="bg-white rounded-xl p-6 shadow-md relative z-10">
+                <h3 className="font-bold text-sm text-foreground mb-2">{step.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{step.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
