@@ -3,8 +3,8 @@ import whyTbhImg from "@/assets/why-tbh.jpg";
 const WhyTBHCircle = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-border/30 shadow-sm">
+      <div className="w-full">
+        <div className="grid lg:grid-cols-2 gap-0 overflow-hidden">
           {/* Left Content */}
           <div
             className="p-10 md:p-16 flex flex-col justify-center"

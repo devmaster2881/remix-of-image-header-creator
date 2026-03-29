@@ -10,7 +10,7 @@ const partners = [
 const TrustedPartners = () => {
   return (
     <section className="py-12 md:py-16 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1236px] mx-auto px-6">
         <h2 className="text-center text-lg font-bold text-foreground mb-10">
           Our Trusted Partners
         </h2>
