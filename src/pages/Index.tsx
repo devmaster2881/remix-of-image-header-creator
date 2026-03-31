@@ -6,6 +6,9 @@ import OurPedagogy from "@/components/OurPedagogy";
 import WhyTBHCircle from "@/components/WhyTBHCircle";
 import Courses from "@/components/Courses";
 import OurMethodologies from "@/components/OurMethodologies";
+import LatestArticles from "@/components/LatestArticles";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -18,6 +21,9 @@ const Index = () => {
       <WhyTBHCircle />
       <Courses />
       <OurMethodologies />
+      <LatestArticles />
+      <FAQ />
+      <Footer />
     </div>
   );
 };
