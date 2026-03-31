@@ -2,36 +2,35 @@ import whyTbhImg from "@/assets/why-tbh.jpg";
 
 const WhyTBHCircle = () => {
   return (
-    <section className="py-0 bg-background">
+    <section className="pt-0 bg-background">
       <div className="w-full">
-        <div className="grid lg:grid-cols-2 gap-0 overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-0 items-stretch">
           {/* Left Content */}
-          <div className="relative p-10 md:p-16 flex flex-col justify-center"
+          <div
+            className="px-8 md:px-16 py-12 flex flex-col justify-center"
             style={{
-              background: "linear-gradient(180deg, #FFF8D9 0%, rgba(255, 248, 217, 0) 100%)",
+              background:
+                "linear-gradient(180deg, #FFF8D9 0%, rgba(255, 248, 217, 0) 100%)",
             }}
           >
-            {/* Dashed vertical line */}
-            <div className="absolute top-0 left-1/2 h-full w-px border-l-2 border-dashed border-muted-foreground/30" />
-
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 relative z-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Why TBH Circle?
             </h2>
-            <p className="font-semibold text-foreground mb-3 relative z-10">
+            <p className="font-semibold text-foreground mb-3">
               Grow with Subject Matter Experts:
             </p>
-            <p className="text-muted-foreground leading-relaxed relative z-10">
+            <p className="text-muted-foreground leading-relaxed">
               Our programs are led by in-house SMEs with 15+ years of corporate
               and behavioural science experience.
             </p>
-            <p className="text-muted-foreground leading-relaxed mt-4 relative z-10">
+            <p className="text-muted-foreground leading-relaxed mt-4">
               This means learning that is grounded in real business contexts, not
               just theory.
             </p>
           </div>
 
           {/* Right Image */}
-          <div className="relative">
+          <div className="overflow-hidden">
             <img
               src={whyTbhImg}
               alt="Yellow office supplies flat lay"
