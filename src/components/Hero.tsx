@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import heroBanner1 from "@/assets/hero-banner.png";
 import heroBanner2 from "@/assets/hero-banner-2.png";
@@ -6,8 +6,20 @@ import heroBanner3 from "@/assets/hero-banner-3.png";
 
 const heroImages = [heroBanner1, heroBanner2, heroBanner3];
 
+// Preload all images on mount
+const preloadImages = (srcs: string[]) => {
+  srcs.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
 const Hero = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    preloadImages(heroImages);
+  }, []);
 
   return (
     <section
@@ -24,12 +36,9 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold leading-[1.15] text-foreground tracking-tight">
               Redefining Impact with SME-Led & Behaviour Training
             </h1>
-
             <p className="text-base text-muted-foreground leading-relaxed max-w-sm">
               Crafting inspired professionals through dynamic, human-powered learning experiences
             </p>
-
-            {/* Email Input */}
             <div className="relative max-w-sm">
               <input
                 type="email"
@@ -45,14 +54,18 @@ const Hero = () => {
           {/* Right Image with dots below */}
           <div className="relative flex flex-col items-center">
             <div className="relative w-full max-w-md">
-              <img
-                src={heroImages[activeSlide]}
-                alt="Training professional"
-                className="w-full h-auto transition-opacity duration-300"
-              />
+              {/* Render all images, show only active — no reload delay */}
+              {heroImages.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt="Training professional"
+                  className={`w-full h-auto transition-opacity duration-300 ${
+                    i === activeSlide ? "opacity-100" : "opacity-0 absolute inset-0"
+                  }`}
+                />
+              ))}
             </div>
-
-            {/* Slider Dots centered below image */}
             <div className="flex gap-3 mt-6">
               {heroImages.map((_, index) => (
                 <button

@@ -4,7 +4,7 @@ const WhyTBHCircle = () => {
   return (
     <section className="pt-0 bg-background">
       <div className="w-full">
-        <div className="grid lg:grid-cols-2 gap-0 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-0 items-stretch min-h-[500px]">
           {/* Left Content */}
           <div
             className="px-8 md:px-16 py-12 flex flex-col justify-center"
