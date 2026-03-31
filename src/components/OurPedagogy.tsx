@@ -35,16 +35,16 @@ const methods = [
 const OurPedagogy = () => {
   return (
     <section
-      className="py-16 md:py-24"
+      className="pb-0"
       style={{
         background:
           "linear-gradient(180deg, rgba(255,248,217,0) 0%, #FFF8D9 50%, rgba(255,248,217,0) 100%)",
       }}
     >
       <div className="w-full">
-        <div className="grid lg:grid-cols-2 gap-0 items-center">
+        <div className="grid lg:grid-cols-2 gap-0 items-stretch">
           {/* Left Image */}
-          <div className="overflow-hidden h-full">
+          <div className="overflow-hidden">
             <img
               src={pedagogyImg}
               alt="Collaborative learning environment"
@@ -53,7 +53,7 @@ const OurPedagogy = () => {
           </div>
 
           {/* Right Content */}
-          <div className="space-y-6 px-8 md:px-16 py-12">
+          <div className="space-y-6 px-8 md:px-16 py-12 flex flex-col justify-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Our Pedagogy
             </h2>
