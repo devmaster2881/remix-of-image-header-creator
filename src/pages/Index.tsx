@@ -7,6 +7,7 @@ import WhyTBHCircle from "@/components/WhyTBHCircle";
 import Courses from "@/components/Courses";
 import OurMethodologies from "@/components/OurMethodologies";
 import LatestArticles from "@/components/LatestArticles";
+import PeopleSlider from "@/components/PeopleSlider";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ const Index = () => {
       <WhyTBHCircle />
       <Courses />
       <OurMethodologies />
+      <PeopleSlider />
       <LatestArticles />
       <FAQ />
       <Footer />
